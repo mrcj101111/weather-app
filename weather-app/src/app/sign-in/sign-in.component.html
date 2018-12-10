@@ -13,20 +13,27 @@
       </div>
     </div>
 
-    <form class="sign-in-form" ngNativeValidate action="/sign-up">
+    <form class="sign-in-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="form-group row">
         <div class="col-sm-12">
-          <input type="text" class="form-control py-4" id="validationDefault01" placeholder="Username" required>
+          <input type="text" class="form-control py-4" formControlName="username" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
           <i class="fas fa-user"></i>
         </div>
       </div>
       <div class="form-group row">
         <div class="col-sm-12">
-          <input type="password" class="form-control py-4" placeholder="Password" required>
+          <input type="password" class="form-control py-4" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
           <i class="fas fa-lock"></i>
         </div>
       </div>
-      <div class="row mt-5">
+      <div class="form-group row mt-5">
         <div class="col-sm-6 text-center">
           <button type="submit" class="btn btn-primary">Sign in</button>
         </div>
