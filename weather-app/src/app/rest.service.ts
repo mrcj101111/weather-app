@@ -8,28 +8,37 @@ import { map, catchError, tap } from 'rxjs/operators';
 })
 export class RestService {
 
-  getWeather(): Observable<any> {
-    console.log('httpOptions', httpOptions);
-    return this.http.post(endpoint, body, httpOptions).pipe(
-      map(this.extractData)
-    )
-  }
+  private _url: string = "http://weather.news24.com/ajaxpro/Weather.Code.Ajax";
 
   constructor(private http: HttpClient) { }
 
-  private extractData(res: Response) {
-    let body = res;
-    return body || {
-
-    };
-  }
+getWeather(): Observable<any[]> {
+  return this.http.get<any[]>(this._url);
 }
 
-const endpoint = 'http://weather.news24.com/ajaxpro/Weather.Code.Ajax';
-const body = { "cityId": "77107" };
-let httpOptions = {
-  headers: new HttpHeaders({
-    'X-AjaxPro-Method': 'GetCurrentOne',
-  })
-};
+  
+
+  //getWeather(): Observable<any> {
+    //console.log('httpOptions', httpOptions);
+    //return this.http.post(endpoint, body, httpOptions).pipe(
+      //map(this.extractData)
+    //)
+  //}
+
+
+  //private extractData(res: Response) {
+    //let body = res;
+    //return body || {
+
+    //};
+  //}
+}
+
+//const endpoint = 'http://weather.news24.com/ajaxpro/Weather.Code.Ajax';
+//const body = { "cityId": "77107" };
+//let httpOptions = {
+  //headers: new HttpHeaders({
+    //'X-AjaxPro-Method': 'GetCurrentOne',
+  //})
+//};
 
