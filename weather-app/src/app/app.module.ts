@@ -13,13 +13,25 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 import { HourForecastComponent } from './hour-forecast/hour-forecast.component';
 import { DayForecastComponent } from './day-forecast/day-forecast.component';
 import { TideForecastComponent } from './tide-forecast/tide-forecast.component';
+import { WeatherDashboardComponent } from './weather-dashboard/weather-dashboard.component';
 
 
 const appRoutes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-in', component: SignInComponent },
-  { path: 'home', component:HomeComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'current-weather', pathMatch: 'full' },
+      { path: 'current-weather', component: CurrentWeatherComponent },
+      { path: 'hour-forecast', component: HourForecastComponent },
+      { path: 'day-forecast', component: DayForecastComponent },
+      { path: 'tide-forecast', component: TideForecastComponent }
+    ]
+  },
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: 'weather-dashboard', component: WeatherDashboardComponent }
 ];
 
 @NgModule({
@@ -31,7 +43,8 @@ const appRoutes: Routes = [
     CurrentWeatherComponent,
     HourForecastComponent,
     DayForecastComponent,
-    TideForecastComponent
+    TideForecastComponent,
+    WeatherDashboardComponent
 
   ],
   imports: [
