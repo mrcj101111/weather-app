@@ -2,6 +2,7 @@
   background-image: url("https://cdn-images-1.medium.com/max/2000/1*Bg4JVDlN2J4j693HHfH_EQ.jpeg");
   width: 100vw;
   height: 100vh;
+  filter: blur(2px);
 }
 
 .sign-in-page {
@@ -21,7 +22,7 @@
 }
 
 .sign-in-header {
-  background: rgb(224, 220, 220);
+  background: #C5C6C7;
   top: -20px;
   height: 80px;
 

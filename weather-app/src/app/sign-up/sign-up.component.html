@@ -1,53 +1,53 @@
 <div class="sign-up-page-body">
-  <div class="container sign-up-page">
+</div>
+<div class="container sign-up-page">
 
-    <div class="row">
-      <div class="col-sm-6 mx-auto sign-up-header ">
-        <h2 class="text-primary text-center">Sign Up</h2>
+  <div class="row">
+    <div class="col-sm-6 mx-auto sign-up-header ">
+      <h2 class="text-primary text-center">Sign Up</h2>
+    </div>
+  </div>
+
+  <form class="sign-up-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <input type="text" class="form-control py-4" placeholder="Full Name" formControlName="fullName" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }">
+        <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+          <div *ngIf="f.fullName.errors.required">Full name is required</div>
+        </div>
       </div>
     </div>
-
-    <form class="sign-up-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <input type="text" class="form-control py-4" placeholder="Full Name" formControlName="fullName" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }">
-          <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
-            <div *ngIf="f.fullName.errors.required">Full name is required</div>
-          </div>
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <input type="text" class="form-control py-4" placeholder="Surname" formControlName="surname" [ngClass]="{ 'is-invalid': submitted && f.surname.errors }">
+        <div *ngIf="submitted && f.surname.errors" class="invalid-feedback">
+          <div *ngIf="f.surname.errors.required">Surname is required</div>
         </div>
       </div>
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <input type="text" class="form-control py-4" placeholder="Surname" formControlName="surname" [ngClass]="{ 'is-invalid': submitted && f.surname.errors }">
-          <div *ngIf="submitted && f.surname.errors" class="invalid-feedback">
-            <div *ngIf="f.surname.errors.required">Surname is required</div>
-          </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <input type="email" class="form-control py-4" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">Email is required</div>
         </div>
       </div>
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <input type="email" class="form-control py-4" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
-          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-            <div *ngIf="f.email.errors.required">Email is required</div>
-          </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <input type="password" class="form-control py-4" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.email.password.required">Password is required</div>
         </div>
       </div>
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <input type="password" class="form-control py-4" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
-          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-            <div *ngIf="f.email.password.required">Password is required</div>
-          </div>
-        </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-6 text-center">
+        <button class="btn btn-primary" routerLink="/sign-in">Back</button>
       </div>
-      <div class="form-group row">
-        <div class="col-sm-6 text-center">
-          <button class="btn btn-primary" routerLink="/sign-in">Back</button>
-        </div>
-        <div class="col-sm-6 text-center">
-          <button class="btn btn-primary" type="submit">Sign up</button>
-        </div>
+      <div class="col-sm-6 text-center">
+        <button class="btn btn-primary" type="submit">Sign up</button>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </div>
