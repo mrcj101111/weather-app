@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -38,11 +38,11 @@ const appRoutes: Routes = [
       },
       {
         path: 'settings-dashboard', component: SettingsDashboardComponent,
-      children: [
-        { path: '', redirectTo: 'profile-settings', pathMatch: 'full' },
-        { path: 'profile-settings', component: ProfileSettingsComponent },
-        { path: 'account-settings', component: AccountSettingsComponent },
-      ]
+        children: [
+          { path: '', redirectTo: 'profile-settings', pathMatch: 'full' },
+          { path: 'profile-settings', component: ProfileSettingsComponent },
+          { path: 'account-settings', component: AccountSettingsComponent },
+        ]
       },
     ]
   },
@@ -63,15 +63,13 @@ const appRoutes: Routes = [
     SettingsDashboardComponent,
     ProfileSettingsComponent,
     AccountSettingsComponent
-
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
