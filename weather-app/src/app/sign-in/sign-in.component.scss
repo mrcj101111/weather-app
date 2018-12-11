@@ -1,4 +1,11 @@
+.sign-in-page-body {
+  background-image: url("https://cdn-images-1.medium.com/max/2000/1*Bg4JVDlN2J4j693HHfH_EQ.jpeg");
+  width: 100vw;
+  height: 100vh;
+}
+
 .sign-in-page {
+  background: rgba(255, 255, 255, 0.8);
   width: 500px;
   position: absolute;
   left: 50%;
@@ -6,6 +13,7 @@
   transform: translate(-50%, -50%);
   border: 1px solid black;
   border-radius: 10px;
+  z-index: 1;
   button {
     width: 100%;
     height: 50px;

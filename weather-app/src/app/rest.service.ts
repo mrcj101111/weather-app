@@ -25,7 +25,7 @@ export class RestService {
   }
 }
 
- const endpoint = 'http://weather.news24.com/ajaxpro/Weather.Code.Ajax,Weather.ashx';
+const endpoint = 'http://weather.news24.com/ajaxpro/Weather.Code.Ajax,Weather.ashx';
 const body = { "cityId": "77107" };
 let httpOptions = {
   headers: new HttpHeaders({
