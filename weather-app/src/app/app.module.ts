@@ -14,24 +14,39 @@ import { HourForecastComponent } from './hour-forecast/hour-forecast.component';
 import { DayForecastComponent } from './day-forecast/day-forecast.component';
 import { TideForecastComponent } from './tide-forecast/tide-forecast.component';
 import { WeatherDashboardComponent } from './weather-dashboard/weather-dashboard.component';
+import { SettingsDashboardComponent } from './settings-dashboard/settings-dashboard.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 const appRoutes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-in', component: SignInComponent },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'home', component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'current-weather', pathMatch: 'full' },
-      { path: 'current-weather', component: CurrentWeatherComponent },
-      { path: 'hour-forecast', component: HourForecastComponent },
-      { path: 'day-forecast', component: DayForecastComponent },
-      { path: 'tide-forecast', component: TideForecastComponent }
+      { path: '', redirectTo: 'weather-dashboard', pathMatch: 'full' },
+      {
+        path: 'weather-dashboard', component: WeatherDashboardComponent,
+        children: [
+          { path: '', redirectTo: 'current-weather', pathMatch: 'full' },
+          { path: 'current-weather', component: CurrentWeatherComponent },
+          { path: 'hour-forecast', component: HourForecastComponent },
+          { path: 'day-forecast', component: DayForecastComponent },
+          { path: 'tide-forecast', component: TideForecastComponent },
+        ]
+      },
+      {
+        path: 'settings-dashboard', component: SettingsDashboardComponent,
+      children: [
+        { path: '', redirectTo: 'profile-settings', pathMatch: 'full' },
+        { path: 'profile-settings', component: ProfileSettingsComponent },
+        { path: 'account-settings', component: AccountSettingsComponent },
+      ]
+      },
     ]
   },
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
-  { path: 'weather-dashboard', component: WeatherDashboardComponent }
 ];
 
 @NgModule({
@@ -44,7 +59,10 @@ const appRoutes: Routes = [
     HourForecastComponent,
     DayForecastComponent,
     TideForecastComponent,
-    WeatherDashboardComponent
+    WeatherDashboardComponent,
+    SettingsDashboardComponent,
+    ProfileSettingsComponent,
+    AccountSettingsComponent
 
   ],
   imports: [
