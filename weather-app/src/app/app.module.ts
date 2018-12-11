@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -9,6 +9,10 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+import { CurrentWeatherComponent } from './current-weather/current-weather.component';
+import { HourForecastComponent } from './hour-forecast/hour-forecast.component';
+import { DayForecastComponent } from './day-forecast/day-forecast.component';
+import { TideForecastComponent } from './tide-forecast/tide-forecast.component';
 
 
 const appRoutes: Routes = [
@@ -23,7 +27,11 @@ const appRoutes: Routes = [
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    HomeComponent
+    HomeComponent,
+    CurrentWeatherComponent,
+    HourForecastComponent,
+    DayForecastComponent,
+    TideForecastComponent
 
   ],
   imports: [
@@ -31,7 +39,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

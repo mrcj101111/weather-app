@@ -17,8 +17,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.rest.getWeather()
-    .subscribe(data => this.weather = data);
-    
+      .subscribe(data => this.weather = data);
+
     var state = "expanded";
     //Check if navbar is expanded or minimized and handle
     $('#navbar-toggle').click(function () {
@@ -34,13 +34,12 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  //getWeather() {
-    //this.weather = [];
-    //console.log('home getWeather()');
-    //this.rest.getWeather().subscribe((data: {}) => {
-      //console.log(data);
-      //this.weather = data;
-    //})
-  //}
+  /* getWeather() {
+    this.rest.getWeather()
+      .subscribe((data: {}) => {
+        console.log(data);
+        this.weather = data;
+      })
+  } */
 }
 
