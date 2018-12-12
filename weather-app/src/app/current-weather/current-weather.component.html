@@ -1,3 +1,24 @@
-<p>
-  current-weather works!
-</p>
+<h1 class="text-center">{{ currentForecast ? currentForecast.CityName : '' }}</h1>
+<h2 class="text-center">{{ weather ? weather.CountryName : '' }}</h2>
+<h3 class="text-center current-weather-description">{{ currentForecast ? currentForecast.Description : '' }}</h3>
+
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-6">
+      <p>Current temperature:</p>
+      <p>Comfort:</p>
+      <p>Wind Speed:</p>
+      <p>Humidity:</p>
+      <p>Wind Direction:</p>
+      <p>Dew Point:</p>
+    </div>
+    <div class="col-3">
+      <p><strong>{{ currentForecast ? currentForecast.Temperature : '' }}˚C</strong></p>
+      <p><strong>{{ currentForecast ? currentForecast.Comfort : '' }}˚C</strong></p>
+      <p><strong>{{ currentForecast ? currentForecast.WindSpeed : '' }}Km/h</strong></p>
+      <p><strong>{{ currentForecast ? currentForecast.Humidity : '' }}%</strong></p>
+      <p><strong>{{ currentForecast ? currentForecast.WindDirectionAbreviated : '' }}</strong></p>
+      <p><strong>{{ currentForecast ? currentForecast.DewPoint : '' }}</strong></p>
+    </div>
+  </div>
+</div>

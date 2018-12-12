@@ -11,9 +11,22 @@ export class RestService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(): Observable<any> {
+  getForecast7Day(): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'X-AjaxPro-Method': 'GetForecast7Day' })
+    };
     return this.http.post(endpoint, body, httpOptions).pipe(
       map(this.extractData),
+      )
+    }
+
+    getCurrentForecast(): Observable<any> {
+      const httpOptions = {
+        headers: new HttpHeaders({ 'X-AjaxPro-Method': 'GetCurrentOne' })
+      };
+      return this.http.post(endpoint, body, httpOptions).pipe(
+        map(this.extractData),
+        //tap(data => console.log('getCurrentForecast', data))
     )
   }
 
@@ -25,10 +38,4 @@ export class RestService {
 
 const endpoint = 'http://weather.news24.com/ajaxpro/Weather.Code.Ajax,Weather.ashx';
 const body = { "cityId": "77107" };
-const httpOptions = {
-  headers: new HttpHeaders({
-    'X-AjaxPro-Method': 'GetCurrentOne',
-  })
-};
-
 // ===== open -n -a "Google Chrome" --args --user-data-dir=/tmp/temp_chrome_user_data_dir http://localhost:8100/ --disable-web-security =====> Use this to open Chrome and avoid cors errors //
