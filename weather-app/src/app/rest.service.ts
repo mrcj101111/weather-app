@@ -11,22 +11,31 @@ export class RestService {
 
   constructor(private http: HttpClient) { }
 
+  getForecast48Hour(): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'X-AjaxPro-Method': 'GetForeCast48Hour' })
+    };
+    return this.http.post(endpoint, body, httpOptions).pipe(
+      map(this.extractData),
+    )
+  }
+
   getForecast7Day(): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({ 'X-AjaxPro-Method': 'GetForecast7Day' })
     };
     return this.http.post(endpoint, body, httpOptions).pipe(
       map(this.extractData),
-      )
-    }
+    )
+  }
 
-    getCurrentForecast(): Observable<any> {
-      const httpOptions = {
-        headers: new HttpHeaders({ 'X-AjaxPro-Method': 'GetCurrentOne' })
-      };
-      return this.http.post(endpoint, body, httpOptions).pipe(
-        map(this.extractData),
-        //tap(data => console.log('getCurrentForecast', data))
+  getCurrentForecast(): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'X-AjaxPro-Method': 'GetCurrentOne' })
+    };
+    return this.http.post(endpoint, body, httpOptions).pipe(
+      map(this.extractData),
+      //tap(data => console.log('getCurrentForecast', data))
     )
   }
 

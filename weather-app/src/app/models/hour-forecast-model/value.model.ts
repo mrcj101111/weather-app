@@ -1,5 +1,5 @@
-import Forecast from './forecast.model';
+import { forecast24Hour } from './forecast24Hour.model';
 
 export class Value {
-    forecast: Forecast[];
+    forecast24Hour: forecast24Hour[];
 }
