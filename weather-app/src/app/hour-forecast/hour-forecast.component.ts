@@ -41,7 +41,7 @@ export class HourForecastComponent implements OnInit {
         this.SecondForecastFourthQuarter = this.weather.forecast24Hour[1].Forecast[3] ? this.weather.forecast24Hour[1].Forecast[3] : null;
 
         this.FirstForecast24Hour = this.weather.forecast24Hour[0] ? this.weather.forecast24Hour[0] : null;
-        this.SecondForecast24Hour = this.weather.forecast24Hour[0] ? this.weather.forecast24Hour[0] : null;
+        this.SecondForecast24Hour = this.weather.forecast24Hour[1] ? this.weather.forecast24Hour[1] : null;
       });
 
   }
