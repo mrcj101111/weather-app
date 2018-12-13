@@ -1,6 +1,97 @@
-<p>
-  {{ forecastFirstEvening ? forecastFirstEvening.DaySegment : '' }}
-</p>
-<p>
-  {{ forecastFirstNight ? forecastFirstNight.DaySegment : '' }}
-</p>
+<h1 class="text-center">48 Hour Forecast</h1>
+
+<div class="container">
+  <div class="row main-info-row">
+
+
+    <div class="col-3">
+      <div class="row sub-row-1">
+      </div>
+      <div class="row sub-row-1 border-bottom border-dark">
+      </div>
+      <div class="row sub-row-2 border-right border-dark">
+        <h5>Temperature</h5>
+      </div>
+      <div class="row sub-row-2 border-right border-dark">
+        <h5>Wind Direction</h5>
+      </div>
+      <div class="row sub-row-2 border-right border-dark">
+        <h5>Humidity</h5>
+      </div>
+      <div class="row sub-row-2 border-right border-dark">
+        <h5>Dew Point</h5>
+      </div>
+      <div class="row sub-row-2 border-right border-dark">
+        <h5>Comfort Level</h5>
+      </div>
+      <div class="row sub-row-2 border-right border-dark">
+        <h5>Visibility</h5>
+      </div>
+      <div class="row sub-row-2 border-right border-dark">
+        <h5>Percipitation</h5>
+      </div>
+    </div>
+
+    <div class="col-6 text-center border-dark border-right">
+      <div class="row sub-row-1">
+        <h3>{{ FirstForecast24Hour ? FirstForecast24Hour.DayName1 : '' }}</h3>
+      </div>
+      <div class="row day-segment-header sub-row-1">
+        <div class="col-4">
+          <h4>{{ FirstForecastFirstQuarter ? FirstForecastFirstQuarter.DaySegment : '' }}</h4>
+        </div>
+        <div class="col-4">
+          <h4>{{ FirstForecastSecondQuarter ? FirstForecastSecondQuarter.DaySegment : '' }}</h4>
+        </div>
+        <div class="col-4">
+          <h4>{{ FirstForecastThirdQuarter ? FirstForecastThirdQuarter.DaySegment : '' }}</h4>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-4">
+          <p>{{ FirstForecastFirstQuarter ? FirstForecastFirstQuarter.Temperature : '' }}˚C</p>
+        </div>
+        <div class="col-4">
+          <p>{{ FirstForecastSecondQuarter ? FirstForecastSecondQuarter.Temperature : '' }}˚C</p>
+        </div>
+        <div class="col-4">
+          <p>{{ FirstForecastThirdQuarter ? FirstForecastThirdQuarter.Temperature : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-4 p-0">
+          <p>{{ FirstForecastFirstQuarter ? FirstForecastFirstQuarter.WindSpeed : '' }}Km/h {{FirstForecastFirstQuarter
+            ? FirstForecastFirstQuarter.WindDirectionAbreviated : '' }}</p>
+
+        </div>
+        <div class="col-4 p-0">
+          <p>{{ FirstForecastFirstQuarter ? FirstForecastSecondQuarter.WindSpeed : '' }}Km/h {{FirstForecastSecondQuarter
+              ? FirstForecastFirstQuarter.WindDirectionAbreviated : '' }}</p>
+        </div>
+        <div class="col-4 p-0">
+          <p>{{ FirstForecastFirstQuarter ? FirstForecastThirdQuarter.WindSpeed : '' }}Km/h {{FirstForecastThirdQuarter
+              ? FirstForecastFirstQuarter.WindDirectionAbreviated : '' }}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-3">
+      <div class="row sub-row-1">
+        <h3>{{ FirstForecast24Hour ? FirstForecast24Hour.DayName2 : '' }}</h3>
+      </div>
+      <div class="row day-segment-header sub-row-1">
+        <div class="col-12">
+          <h4>{{ FirstForecastFourthQuarter ? FirstForecastFourthQuarter.DaySegment : '' }}</h4>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-12">
+          <p>{{ FirstForecastFourthQuarter ? FirstForecastFourthQuarter.Temperature : '' }}˚C</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

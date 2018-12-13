@@ -1,0 +1,36 @@
+.main-info-row {
+  .sub-row-1 {
+    height: 38px;
+    text-align: center;
+  }
+
+  .day-segment-header {
+    border-bottom: 1px solid black;
+  }
+
+  .sub-row-2 {
+    height: 30px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 38px;
+    margin: auto;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 10px;
+  }
+  p {
+      font-size: 12px;
+  }
+}

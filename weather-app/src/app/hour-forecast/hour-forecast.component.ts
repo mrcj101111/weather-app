@@ -13,14 +13,16 @@ import { Forecast } from '../models/hour-forecast-model/forecast.model';
 })
 export class HourForecastComponent implements OnInit {
   weather: Value;
-  forecastFirstEvening: Forecast;
-  forecastFirstNight: Forecast;
-  forecastFirstMorning: Forecast;
-  forecastFirstAfternoon: Forecast;
-  forecastSecondEvening: Forecast;
-  forecastSecondNight: Forecast;
-  forecastSecondMorning: Forecast;
-  forecastSecondAfternoon: Forecast;
+  FirstForecastFirstQuarter: Forecast;
+  FirstForecastSecondQuarter: Forecast;
+  FirstForecastThirdQuarter: Forecast;
+  FirstForecastFourthQuarter: Forecast;
+  SecondForecastFirstQuarter: Forecast;
+  SecondForecastSecondQuarter: Forecast;
+  SecondForecastThirdQuarter: Forecast;
+  SecondForecastFourthQuarter: Forecast;
+  FirstForecast24Hour: forecast24Hour;
+  SecondForecast24Hour: forecast24Hour;
 
   constructor(public rest: RestService) { }
 
@@ -28,9 +30,18 @@ export class HourForecastComponent implements OnInit {
     this.rest.getForecast48Hour()
       .subscribe(data => {
         this.weather = data.value;
-        console.log(data)
-        this.forecastFirstEvening = this.weather.forecast24Hour[0].Forecast[0] ? this.weather.forecast24Hour[0].Forecast[0]  : null;
-        this.forecastFirstNight = this.weather.forecast24Hour[0].Forecast[1] ? this.weather.forecast24Hour[0].Forecast[1]  : null;
+        this.FirstForecastFirstQuarter = this.weather.forecast24Hour[0].Forecast[0] ? this.weather.forecast24Hour[0].Forecast[0] : null;
+        this.FirstForecastSecondQuarter = this.weather.forecast24Hour[0].Forecast[1] ? this.weather.forecast24Hour[0].Forecast[1] : null;
+        this.FirstForecastThirdQuarter = this.weather.forecast24Hour[0].Forecast[2] ? this.weather.forecast24Hour[0].Forecast[2] : null;
+        this.FirstForecastFourthQuarter = this.weather.forecast24Hour[0].Forecast[3] ? this.weather.forecast24Hour[0].Forecast[3] : null;
+
+        this.SecondForecastFirstQuarter = this.weather.forecast24Hour[1].Forecast[0] ? this.weather.forecast24Hour[1].Forecast[0] : null;
+        this.SecondForecastSecondQuarter = this.weather.forecast24Hour[1].Forecast[1] ? this.weather.forecast24Hour[1].Forecast[1] : null;
+        this.SecondForecastThirdQuarter = this.weather.forecast24Hour[1].Forecast[2] ? this.weather.forecast24Hour[1].Forecast[2] : null;
+        this.SecondForecastFourthQuarter = this.weather.forecast24Hour[1].Forecast[3] ? this.weather.forecast24Hour[1].Forecast[3] : null;
+
+        this.FirstForecast24Hour = this.weather.forecast24Hour[0] ? this.weather.forecast24Hour[0] : null;
+        this.SecondForecast24Hour = this.weather.forecast24Hour[0] ? this.weather.forecast24Hour[0] : null;
       });
 
   }

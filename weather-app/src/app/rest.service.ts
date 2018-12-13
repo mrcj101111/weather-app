@@ -48,3 +48,4 @@ export class RestService {
 const endpoint = 'http://weather.news24.com/ajaxpro/Weather.Code.Ajax,Weather.ashx';
 const body = { "cityId": "77107" };
 // ===== open -n -a "Google Chrome" --args --user-data-dir=/tmp/temp_chrome_user_data_dir http://localhost:8100/ --disable-web-security =====> Use this to open Chrome and avoid cors errors //
+// /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
