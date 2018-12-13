@@ -1,5 +1,5 @@
-import { Forecast } from './Forecast.model';
+import { Forecasts } from './Forecast.model';
 
 export class Value {
-    Forecast: Forecast[];
+    Forecasts: Forecasts[];
 }

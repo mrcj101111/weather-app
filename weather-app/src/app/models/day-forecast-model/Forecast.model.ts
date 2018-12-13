@@ -1,4 +1,4 @@
-export class Forecast {
+export class Forecasts {
     Air: string;
     AirDescription: string;
     Beaufort: any;
