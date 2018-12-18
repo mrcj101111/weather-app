@@ -27,13 +27,12 @@ export class DayForecastComponent implements OnInit {
       .subscribe(data => {
         this.weather = data.value;
         this.ForecastDay1 = this.weather.Forecasts[0] ? this.weather.Forecasts[0] : null;
-        this.ForecastDay2 = this.weather.Forecasts[1] ? this.weather.Forecasts[0] : null;
-        this.ForecastDay3 = this.weather.Forecasts[2] ? this.weather.Forecasts[0] : null;
-        this.ForecastDay4 = this.weather.Forecasts[3] ? this.weather.Forecasts[0] : null;
-        this.ForecastDay5 = this.weather.Forecasts[4] ? this.weather.Forecasts[0] : null;
-        this.ForecastDay6 = this.weather.Forecasts[5] ? this.weather.Forecasts[0] : null;
-        this.ForecastDay7 = this.weather.Forecasts[6] ? this.weather.Forecasts[0] : null;
-
+        this.ForecastDay2 = this.weather.Forecasts[1] ? this.weather.Forecasts[1] : null;
+        this.ForecastDay3 = this.weather.Forecasts[2] ? this.weather.Forecasts[2] : null;
+        this.ForecastDay4 = this.weather.Forecasts[3] ? this.weather.Forecasts[3] : null;
+        this.ForecastDay5 = this.weather.Forecasts[4] ? this.weather.Forecasts[4] : null;
+        this.ForecastDay6 = this.weather.Forecasts[5] ? this.weather.Forecasts[5] : null;
+        this.ForecastDay7 = this.weather.Forecasts[6] ? this.weather.Forecasts[6] : null;
       });
 
   }

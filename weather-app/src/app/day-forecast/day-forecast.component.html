@@ -1,3 +1,393 @@
-<p>
-    {{ ForecastDay1 ? ForecastDay1.Sky : '' }}
-</p>
+<h1 class="text-center">7 Day Forecast</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-1 text-center">
+      <div class="row sub-row-1">
+        <div class="col-12 my-auto">
+          <h5>Day</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-12 day-description-col">
+          {{ ForecastDay1 ? ForecastDay1.ShortWeekDay : '' }}
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-12 day-description-col">
+          {{ ForecastDay2 ? ForecastDay2.ShortWeekDay : '' }}
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-12 day-description-col">
+          {{ ForecastDay3 ? ForecastDay3.ShortWeekDay : '' }}
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-12 day-description-col">
+          {{ ForecastDay4 ? ForecastDay4.ShortWeekDay : '' }}
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-12 day-description-col">
+          {{ ForecastDay5 ? ForecastDay5.ShortWeekDay : '' }}
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-12 day-description-col">
+          {{ ForecastDay6 ? ForecastDay6.ShortWeekDay : '' }}
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col-12 day-description-col">
+          {{ ForecastDay7 ? ForecastDay7.ShortWeekDay : '' }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4 text-center">
+      <div class="row sub-row-1">
+        <div class="col p-0 my-auto">
+          <h5>Description</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay1 ? ForecastDay1.Description : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay2 ? ForecastDay2.Description : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay3 ? ForecastDay3.Description : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay4 ? ForecastDay4.Description : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay5 ? ForecastDay5.Description : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay6 ? ForecastDay6.Description : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay7 ? ForecastDay7.Description : '' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="row row sub-row-1">
+        <div class="col p-0 my-auto">
+          <h5>High Temp</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay1 ? ForecastDay1.HighTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay2 ? ForecastDay2.HighTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay3 ? ForecastDay3.HighTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay4 ? ForecastDay4.HighTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay5 ? ForecastDay5.HighTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay6 ? ForecastDay6.HighTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay7 ? ForecastDay7.HighTemp : '' }}˚C</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-1 text-center">
+      <div class="row row sub-row-1">
+        <div class="col p-0 my-auto">
+          <h5>Low Temp</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay1 ? ForecastDay1.LowTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay2 ? ForecastDay2.LowTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay3 ? ForecastDay3.LowTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay4 ? ForecastDay4.LowTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay5 ? ForecastDay5.LowTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay6 ? ForecastDay6.LowTemp : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay7 ? ForecastDay7.LowTemp : '' }}˚C</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="row row sub-row-1">
+        <div class="col p-0 my-auto">
+          <h5>Wind</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay1 ? ForecastDay1.WindSpeed : '' }}Km/h</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay2 ? ForecastDay2.WindSpeed : '' }}Km/h</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay3 ? ForecastDay3.WindSpeed : '' }}Km/h</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay4 ? ForecastDay4.WindSpeed : '' }}Km/h</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay5 ? ForecastDay5.WindSpeed : '' }}Km/h</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay6 ? ForecastDay6.WindSpeed : '' }}Km/h</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay7 ? ForecastDay7.WindSpeed : '' }}Km/h</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="row sub-row-1">
+        <div class="col p-0 my-auto">
+          <h5>Humidity</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay1 ? ForecastDay1.Humidity : '' }}%</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay2 ? ForecastDay2.Humidity : '' }}%</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay3 ? ForecastDay3.Humidity : '' }}%</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay4 ? ForecastDay4.Humidity : '' }}%</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay5 ? ForecastDay5.Humidity : '' }}%</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay6 ? ForecastDay6.Humidity : '' }}%</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay7 ? ForecastDay7.Humidity : '' }}%</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="row sub-row-1">
+        <div class="col p-0 my-auto">
+          <h5>Comfort Level</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay1 ? ForecastDay1.Comfort : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay2 ? ForecastDay2.Comfort : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay3 ? ForecastDay3.Comfort : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay4 ? ForecastDay4.Comfort : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay5 ? ForecastDay5.Comfort : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay6 ? ForecastDay6.Comfort : '' }}˚C</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay7 ? ForecastDay7.Comfort : '' }}˚C</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="row sub-row-1">
+        <div class="col p-0 my-auto">
+          <h5>UV Index</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay1 ? ForecastDay1.UV : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay2 ? ForecastDay2.UV : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay3 ? ForecastDay3.UV : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay4 ? ForecastDay4.UV : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay5 ? ForecastDay5.UV : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay6 ? ForecastDay6.UV : '' }}</p>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+        <div class="col">
+          <p>{{ ForecastDay7 ? ForecastDay7.UV : '' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="row sub-row-1">
+        <div class="col p-0 my-auto">
+          <h5>Chance of Percip.</h5>
+        </div>
+      </div>
+      <div class="row sub-row-2">
+          <div class="col">
+            <p>{{ ForecastDay1 ? ForecastDay1.PrecipitationProbability : '' }}%</p>
+          </div>
+        </div>
+      <div class="row sub-row-2">
+          <div class="col">
+            <p>{{ ForecastDay2 ? ForecastDay2.PrecipitationProbability : '' }}%</p>
+          </div>
+        </div>
+      <div class="row sub-row-2">
+          <div class="col">
+            <p>{{ ForecastDay3 ? ForecastDay3.PrecipitationProbability : '' }}%</p>
+          </div>
+        </div>
+      <div class="row sub-row-2">
+          <div class="col">
+            <p>{{ ForecastDay4 ? ForecastDay4.PrecipitationProbability : '' }}%</p>
+          </div>
+        </div>
+      <div class="row sub-row-2">
+          <div class="col">
+            <p>{{ ForecastDay5 ? ForecastDay5.PrecipitationProbability : '' }}%</p>
+          </div>
+        </div>
+      <div class="row sub-row-2">
+          <div class="col">
+            <p>{{ ForecastDay6 ? ForecastDay6.PrecipitationProbability : '' }}%</p>
+          </div>
+        </div>
+      <div class="row sub-row-2">
+          <div class="col">
+            <p>{{ ForecastDay7 ? ForecastDay7.PrecipitationProbability : '' }}%</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
